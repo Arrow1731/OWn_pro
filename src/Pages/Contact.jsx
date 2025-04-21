@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Map from '../assets/map.png';
 
 export default class Contact extends Component {
   render() {
@@ -10,9 +11,8 @@ export default class Contact extends Component {
             <p><a href="#">Toshkent shahar, Mirzo Ulugʻbek tumani, Muminov koʻchasi, 4A</a></p>
           </div>
           <div>
-            <p>
-              In There will online Map!!!
-            </p>
+            {/* <img className='w-[730px]' src={Map} alt="" /> */}
+            <p>Img Not Found</p>
           </div>
         </div>
       </div>

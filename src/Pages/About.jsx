@@ -47,8 +47,7 @@ export default class About extends Component {
                 <img src="" alt="" />
               </div>
             </div>
-          </div>
-          <div></div>
+          </div>  
         </div>
       </div>
     )
