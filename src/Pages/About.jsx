@@ -3,10 +3,10 @@ import React, { Component } from 'react'
 export default class About extends Component {
   render() {
     return (
-      <div className='container font-lato'>
+      <div className='container font-lato my-[40px]'>
         <div className='text-center'>
           <h2 className='text-[43px] font-bold'>Biz Haqimizda</h2>
-          <p className='text-[19px]'><span className='text-[23px]'>Zamonaviy ta’limga ilk qadam — biz bilan!</span> <br /> Bizning ta’lim markazimiz — bu raqamli davr talablariga javob beruvchi, bilim olish va uni baholash jarayonlarini
+          <p className='text-[19px] my-[10px]'><span className='text-[23px]'>Zamonaviy ta’limga ilk qadam — biz bilan!</span> <br /><br /> Bizning ta’lim markazimiz — bu raqamli davr talablariga javob beruvchi, bilim olish va uni baholash jarayonlarini
             engillashtiruvchi onlayn platformadir. Bizning maqsadimiz – o‘quvchilarga sifatli, qulay va adolatli ta’lim tizimini taqdim etish.
           </p>
         </div>
@@ -28,7 +28,7 @@ export default class About extends Component {
         <div>
           <div>
             <h5 className='text-center text-[37px] font-bold'>Onlayn imtihon tizimi</h5>
-            <p className='text-center text-[20px]'>Bizning onlayn imtihon platformamiz orqali siz istalgan joyda, istalgan vaqtda bilimlaringizni sinab
+            <p className='text-center text-[20px] my-[12px]'>Bizning onlayn imtihon platformamiz orqali siz istalgan joyda, istalgan vaqtda bilimlaringizni sinab
               ko‘rishingiz mumkin. Har bir testlar to‘plami tajribali mutaxassislar tomonidan ishlab chiqilgan bo‘lib, o‘quvchilarning bilim va ko‘nikmalarini aniq baholashga xizmat qiladi.
             </p>
             <div>
