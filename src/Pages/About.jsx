@@ -4,7 +4,7 @@ export default class About extends Component {
   render() {
     return (
       <div className='container'>
-        <h1>Salom Abutga nima yozaman</h1>
+        <h1>Salom Abutga nima yozaman?</h1>
       </div>
     )
   }
