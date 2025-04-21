@@ -9,7 +9,7 @@ import TwitterIcon from '../assets/twitter-brands.svg';
 
 function Footer() {
   return (
-    <footer className="container">
+    <footer className="container my-[50px]">
       <div>
             <div className='flex items-center justify-between font-bold font-lato'>
               <div>
