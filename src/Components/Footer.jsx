@@ -13,7 +13,7 @@ function Footer() {
       <div>
             <div className='flex items-center justify-between font-bold font-lato'>
               <div>
-                <h3 className='text-[50px]'>Contact with Us</h3>
+                <h3 className='text-[50px]'>Contact Us</h3>
               </div>
               <div className='bg-[#000] w-[850px] h-[2px]'></div>
             </div>

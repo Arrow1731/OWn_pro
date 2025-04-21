@@ -71,7 +71,7 @@ export default class Home extends Component {
                 <img className='px-[31px] max-w-[320px] w-full h-[350px] bg-[#808080] rounded-[55px]' src={User} alt="" />
                 <p className='font-bold text-[34px] my-[21px]'>Name, Surname</p>
                 <div className='flex justify-center gap-[34px] my-[15px]'>
-                  <a href="#"><img className='w-[50px]' src={TelegramIcon} alt="" /></a>
+                  <a href="https://t.me/KamilovAzizbek" target="_blank"><img className='w-[50px]' src={TelegramIcon} alt="" /></a>
                   <a href="#"><img className='w-[50px]' src={InstaIcon} alt="" /></a>
                   <a href="#"><img className='w-[50px]' src={EmailIcon} alt="" /></a>
                   </div>
@@ -89,7 +89,7 @@ export default class Home extends Component {
                 <img className='px-[31px] max-w-[300px] w-full h-[350px] bg-[#808080] rounded-[55px]' src={User} alt="" />
                 <p className='font-bold text-[34px] my-[21px]'>Name, Surname</p>
                 <div className='flex justify-center gap-[34px] my-[15px]'>
-                  <a href="#"><img className='w-[50px]' src={TelegramIcon} alt="" /></a>
+                  <a href="https://t.me/Munisakh23" target='_blank'><img className='w-[50px]' src={TelegramIcon} alt="" /></a>
                   <a href="#"><img className='w-[50px]' src={InstaIcon} alt="" /></a>
                   <a href="#"><img className='w-[50px]' src={EmailIcon} alt="" /></a>
                   </div>
