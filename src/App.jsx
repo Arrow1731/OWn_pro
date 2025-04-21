@@ -7,6 +7,7 @@ import Contact from "./Pages/Contact";
 import Teacher from "./Pages/Teacher";
 import Student from "./Pages/Student";
 import Login from "./Pages/Login";
+import Register from "./Pages/Register";
 import NotFound from "./Pages/NotFound";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/teacher" element={<Teacher />} />
         <Route path="/student" element={<Student />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
 
       <Footer />
