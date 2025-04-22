@@ -67,49 +67,135 @@
 // }
 
 
-import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
-import { auth, provider } from '../Firebase/firebase'
-import { signInWithPopup } from 'firebase/auth'
+// import React, { Component } from 'react'
+// import { NavLink } from 'react-router-dom'
+// import { auth, provider } from '../Firebase/firebase'
+// import { signInWithPopup } from 'firebase/auth'
+
+// export default class Register extends Component {
+//   handleGoogleSignUp = async () => {
+//     try {
+//       const result = await signInWithPopup(auth, provider)
+//       const user = result.user
+//       console.log("Google registered user:", user)
+//       // Optional: Redirect or save user to backend here
+//     } catch (error) {
+//       console.error("Google Sign-Up Error:", error)
+//     }
+//   }
+
+//   render() {
+//     return (
+//       <div className='container flex justify-center items-center h-screen'>
+//         <div className='max-w-[320px] w-full p-4 border rounded-lg shadow-md'>
+//           <label htmlFor="email">Emailingizni Kiriting</label><br />
+//           <input className='w-full p-2 mb-2 rounded-lg border' type="email" id="email" placeholder='E-mail' /><br />
+
+//           <label htmlFor="password">Parolingizni Kiriting</label><br />
+//           <input className='w-full p-2 mb-2 rounded-lg border' type="password" id="password" placeholder='Password' /><br />
+
+//           <label htmlFor="re-password">Parolingizni Takroriy Kiriting</label><br />
+//           <input className='w-full p-2 mb-4 rounded-lg border' type="password" id="re-password" placeholder='Re-Enter Password' /><br />
+
+//           <div className='flex justify-between items-center mb-4'>
+//             <NavLink to="/login" className="text-blue-600">Log In</NavLink>
+//             {/* <NavLink to="/register">Sign Up</NavLink> */}
+//           </div>
+
+//           <button
+//             onClick={this.handleGoogleSignUp}
+//             className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition"
+//           >
+//             Sign Up with Google
+//           </button>
+//         </div>
+//       </div>
+//     )
+//   }
+// }
+
+
+
+
+
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import { auth, provider } from '../Firebase/firebase';
+import { signInWithPopup } from 'firebase/auth';
 
 export default class Register extends Component {
   handleGoogleSignUp = async () => {
     try {
-      const result = await signInWithPopup(auth, provider)
-      const user = result.user
-      console.log("Google registered user:", user)
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      console.log("Google registered user:", user);
       // Optional: Redirect or save user to backend here
     } catch (error) {
-      console.error("Google Sign-Up Error:", error)
+      console.error("Google Sign-Up Error:", error);
     }
-  }
+  };
 
   render() {
     return (
-      <div className='container flex justify-center items-center h-screen'>
-        <div className='max-w-[320px] w-full p-4 border rounded-lg shadow-md'>
-          <label htmlFor="email">Emailingizni Kiriting</label><br />
-          <input className='w-full p-2 mb-2 rounded-lg border' type="email" id="email" placeholder='E-mail' /><br />
+      <div className='min-h-screen flex justify-center items-center bg-gray-100'>
+        <div className='bg-white p-8 rounded-lg shadow-lg w-full max-w-md'>
+          <h2 className='text-3xl font-bold text-center mb-6 text-blue-600'>Create an Account</h2>
 
-          <label htmlFor="password">Parolingizni Kiriting</label><br />
-          <input className='w-full p-2 mb-2 rounded-lg border' type="password" id="password" placeholder='Password' /><br />
-
-          <label htmlFor="re-password">Parolingizni Takroriy Kiriting</label><br />
-          <input className='w-full p-2 mb-4 rounded-lg border' type="password" id="re-password" placeholder='Re-Enter Password' /><br />
-
-          <div className='flex justify-between items-center mb-4'>
-            <NavLink to="/login" className="text-blue-600">Log In</NavLink>
-            {/* <NavLink to="/register">Sign Up</NavLink> */}
+          {/* Email Input */}
+          <div className='mb-4'>
+            <label htmlFor="email" className='block text-lg font-semibold'>Email</label>
+            <input 
+              className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' 
+              type="email" 
+              id="email" 
+              placeholder='Enter your email' 
+              required 
+            />
           </div>
 
-          <button
+          {/* Password Input */}
+          <div className='mb-4'>
+            <label htmlFor="password" className='block text-lg font-semibold'>Password</label>
+            <input 
+              className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' 
+              type="password" 
+              id="password" 
+              placeholder='Enter your password' 
+              required 
+            />
+          </div>
+
+          {/* Re-enter Password Input */}
+          <div className='mb-6'>
+            <label htmlFor="re-password" className='block text-lg font-semibold'>Re-enter Password</label>
+            <input 
+              className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' 
+              type="password" 
+              id="re-password" 
+              placeholder='Re-enter your password' 
+              required 
+            />
+          </div>
+
+          {/* Login Link */}
+          <div className='flex justify-between items-center mb-4'>
+            <NavLink to="/login" className="text-blue-600">Already have an account? Log In</NavLink>
+          </div>
+
+          {/* Sign-Up Button */}
+          <button 
             onClick={this.handleGoogleSignUp}
-            className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition"
+            className="w-full py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
           >
             Sign Up with Google
           </button>
+
+          {/* Or alternative method */}
+          <div className='mt-4 text-center'>
+            <p className='text-sm'>Or, sign up with your email</p>
+          </div>
         </div>
       </div>
-    )
+    );
   }
 }
