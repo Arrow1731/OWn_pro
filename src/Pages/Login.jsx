@@ -95,44 +95,44 @@ export default class Login extends Component {
     return (
       <div className='min-h-screen flex justify-center items-center bg-gray-100'>
         <div className='bg-white p-8 rounded-xl shadow-lg w-full max-w-md'>
-          <h2 className='text-3xl font-bold text-center mb-6 text-blue-600'>Login to Your Account</h2>
+          <h2 className='text-3xl font-bold text-center mb-6 text-blue-600'>Shaxsiy kabinetga kirish</h2>
 
           {/* Email Input */}
           <div className='mb-4'>
             <label htmlFor="email" className='block text-lg font-semibold'>Email</label>
-            <input className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' 
-                   type="email" id="email" placeholder='Enter your email' />
+            <input className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+                   type="email" id="email" placeholder='Emailingizni kiriting' />
           </div>
 
           {/* Password Input */}
           <div className='mb-6'>
-            <label htmlFor="password" className='block text-lg font-semibold'>Password</label>
-            <input className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' 
-                   type="password" id="password" placeholder='Enter your password' />
+            <label htmlFor="password" className='block text-lg font-semibold'>Parol</label>
+            <input className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+                   type="password" id="password" placeholder='Parolingizni kiriting' />
           </div>
 
           {/* Login and Sign Up Links */}
           <div className='flex justify-between items-center'>
-            <button className='w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition'>Log In</button>
+            <button className='w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition'>Tizimga kirish</button>
           </div>
 
           {/* Sign Up Button */}
           <div className='mt-4 text-center'>
-            <p className='text-sm mb-2'>Don't have an account?</p>
+            <p className='text-sm mb-2'>Sizda profilingiz yoqmi unda battar boling?</p>
             <Link to='/register'>
               <button className='w-full py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition'>
-                Sign Up
+                Ro'yxatdan o'tish
               </button>
             </Link>
           </div>
 
           {/* Google Sign-In */}
           <div className='mt-6'>
-            <button 
-              onClick={this.handleGoogleLogin} 
+            <button
+              onClick={this.handleGoogleLogin}
               className='w-full py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition'
             >
-              Sign in with Google
+              Google bilan tizimga kirish
             </button>
           </div>
         </div>

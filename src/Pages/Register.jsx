@@ -144,36 +144,36 @@
 //           {/* Email Input */}
 //           <div className='mb-4'>
 //             <label htmlFor="email" className='block text-lg font-semibold'>Email</label>
-//             <input 
-//               className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' 
-//               type="email" 
-//               id="email" 
-//               placeholder='Enter your email' 
-//               required 
+//             <input
+//               className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+//               type="email"
+//               id="email"
+//               placeholder='Enter your email'
+//               required
 //             />
 //           </div>
 
 //           {/* Password Input */}
 //           <div className='mb-4'>
 //             <label htmlFor="password" className='block text-lg font-semibold'>Password</label>
-//             <input 
-//               className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' 
-//               type="password" 
-//               id="password" 
-//               placeholder='Enter your password' 
-//               required 
+//             <input
+//               className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+//               type="password"
+//               id="password"
+//               placeholder='Enter your password'
+//               required
 //             />
 //           </div>
 
 //           {/* Re-enter Password Input */}
 //           <div className='mb-6'>
 //             <label htmlFor="re-password" className='block text-lg font-semibold'>Re-enter Password</label>
-//             <input 
-//               className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' 
-//               type="password" 
-//               id="re-password" 
-//               placeholder='Re-enter your password' 
-//               required 
+//             <input
+//               className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+//               type="password"
+//               id="re-password"
+//               placeholder='Re-enter your password'
+//               required
 //             />
 //           </div>
 
@@ -183,7 +183,7 @@
 //           </div>
 
 //           {/* Sign-Up Button */}
-//           <button 
+//           <button
 //             onClick={this.handleGoogleSignUp}
 //             className="w-full py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
 //           >
@@ -241,12 +241,12 @@
 //   handleEmailSignUp = async (e) => {
 //     e.preventDefault();
 //     const { email, password, confirmPassword } = this.state;
-    
+
 //     if (password !== confirmPassword) {
 //       this.setState({ error: "Passwords do not match!" });
 //       return;
 //     }
-    
+
 //     try {
 //       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
 //       const user = userCredential.user;
@@ -270,43 +270,43 @@
 //           <form onSubmit={this.handleEmailSignUp}>
 //             <div className='mb-4'>
 //               <label htmlFor="email" className='block text-lg font-semibold'>Email</label>
-//               <input 
-//                 className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' 
-//                 type="email" 
-//                 id="email" 
+//               <input
+//                 className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+//                 type="email"
+//                 id="email"
 //                 name="email"
 //                 value={email}
 //                 onChange={this.handleInputChange}
-//                 placeholder='Enter your email' 
-//                 required 
+//                 placeholder='Enter your email'
+//                 required
 //               />
 //             </div>
 
 //             <div className='mb-4'>
 //               <label htmlFor="password" className='block text-lg font-semibold'>Password</label>
-//               <input 
-//                 className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' 
-//                 type="password" 
-//                 id="password" 
+//               <input
+//                 className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+//                 type="password"
+//                 id="password"
 //                 name="password"
 //                 value={password}
 //                 onChange={this.handleInputChange}
-//                 placeholder='Enter your password' 
-//                 required 
+//                 placeholder='Enter your password'
+//                 required
 //               />
 //             </div>
 
 //             <div className='mb-6'>
 //               <label htmlFor="confirmPassword" className='block text-lg font-semibold'>Confirm Password</label>
-//               <input 
-//                 className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' 
-//                 type="password" 
-//                 id="confirmPassword" 
+//               <input
+//                 className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+//                 type="password"
+//                 id="confirmPassword"
 //                 name="confirmPassword"
 //                 value={confirmPassword}
 //                 onChange={this.handleInputChange}
-//                 placeholder='Re-enter your password' 
-//                 required 
+//                 placeholder='Re-enter your password'
+//                 required
 //               />
 //             </div>
 
@@ -314,7 +314,7 @@
 //             {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
 
 //             {/* Sign-Up Button */}
-//             <button 
+//             <button
 //               type="submit"
 //               className="w-full py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
 //             >
@@ -328,7 +328,7 @@
 //           </div>
 
 //           {/* Google Sign-Up Button */}
-//           <button 
+//           <button
 //             onClick={this.handleGoogleSignUp}
 //             className="w-full py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition mt-4"
 //           >
@@ -419,7 +419,7 @@ export default class Register extends Component {
     return (
       <div className='min-h-screen flex justify-center items-center bg-gray-100'>
         <div className='bg-white p-8 rounded-lg shadow-lg w-full max-w-md'>
-          <h2 className='text-3xl font-bold text-center mb-6 text-blue-600'>Create an Account</h2>
+          <h2 className='text-3xl font-bold text-center mb-6 text-blue-600'>Hisob yaratish</h2>
 
           <form onSubmit={this.handleEmailSignUp}>
             <div className='mb-4'>
@@ -431,13 +431,13 @@ export default class Register extends Component {
                 name="email"
                 value={email}
                 onChange={this.handleInputChange}
-                placeholder='Enter your email'
+                placeholder='Emailingizni kiriting'
                 required
               />
             </div>
 
             <div className='mb-4'>
-              <label htmlFor="password" className='block text-lg font-semibold'>Password</label>
+              <label htmlFor="password" className='block text-lg font-semibold'>Parol</label>
               <input
                 className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
                 type="password"
@@ -445,13 +445,13 @@ export default class Register extends Component {
                 name="password"
                 value={password}
                 onChange={this.handleInputChange}
-                placeholder='Enter your password'
+                placeholder='Parolingizni kiriting'
                 required
               />
             </div>
 
             <div className='mb-4'>
-              <label htmlFor="confirmPassword" className='block text-lg font-semibold'>Confirm Password</label>
+              <label htmlFor="confirmPassword" className='block text-lg font-semibold'>Parolni tastiqlang</label>
               <input
                 className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
                 type="password"
@@ -459,13 +459,13 @@ export default class Register extends Component {
                 name="confirmPassword"
                 value={confirmPassword}
                 onChange={this.handleInputChange}
-                placeholder='Re-enter your password'
+                placeholder='Parolni qayta kiriting'
                 required
               />
             </div>
 
             <div className='mb-6'>
-              <label htmlFor="role" className='block text-lg font-semibold'>Select Role</label>
+              <label htmlFor="role" className='block text-lg font-semibold'>Tanlang</label>
               <select
                 id="role"
                 name="role"
@@ -474,8 +474,8 @@ export default class Register extends Component {
                 className='w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
                 required
               >
-                <option value="student">Student</option>
-                <option value="teacher">Teacher</option>
+                <option value="student">O'quvchi</option>
+                <option value="teacher">O'qituvchi</option>
               </select>
             </div>
 
@@ -485,19 +485,19 @@ export default class Register extends Component {
               type="submit"
               className="w-full py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
             >
-              Sign Up with Email
+              Email bilan ro'yxatdan o'tish
             </button>
           </form>
 
           <div className='flex justify-between items-center mb-4 mt-6'>
-            <NavLink to="/login" className="text-blue-600">Already have an account? Log In</NavLink>
+            <NavLink to="/login" className="text-blue-600">Profilingiz bormi? Tizimga kirish</NavLink>
           </div>
 
           <button
             onClick={this.handleGoogleSignUp}
             className="w-full py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition mt-4"
           >
-            Sign Up with Google
+            Google bilan ro'yxatdan o'tish
           </button>
         </div>
       </div>

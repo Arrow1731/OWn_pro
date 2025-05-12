@@ -84,9 +84,9 @@ function Navigation() {
 
         {/* Navigation Links */}
         <div className={`flex-col lg:flex-row lg:flex gap-6 items-center absolute lg:static bg-[#f7bf9f] w-full lg:w-auto left-0 top-[70px] p-4 lg:p-0 z-10 transition-all duration-300 ease-in-out ${isMenuOpen ? 'flex' : 'hidden'}`}>
-          <NavLink className='font-lato font-bold text-[#424551]' to="/" onClick={() => setIsMenuOpen(false)}>Home</NavLink>
-          <NavLink className='font-lato font-bold text-[#424551]' to="/about" onClick={() => setIsMenuOpen(false)}>About</NavLink>
-          <NavLink className='font-lato font-bold text-[#424551]' to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</NavLink>
+          <NavLink className='font-lato font-bold text-[#424551]' to="/" onClick={() => setIsMenuOpen(false)}>Bosh sahifa</NavLink>
+          <NavLink className='font-lato font-bold text-[#424551]' to="/about" onClick={() => setIsMenuOpen(false)}>Biz haqimizda</NavLink>
+          <NavLink className='font-lato font-bold text-[#424551]' to="/contact" onClick={() => setIsMenuOpen(false)}>Bog'lanish</NavLink>
 
           {user ? (
             <>
@@ -102,7 +102,7 @@ function Navigation() {
               </button>
             </>
           ) : (
-            <NavLink className='font-lato font-bold text-[#424551]' to="/login" onClick={() => setIsMenuOpen(false)}>Log in / Register</NavLink>
+            <NavLink className='font-lato font-bold text-[#424551]' to="/login" onClick={() => setIsMenuOpen(false)}>Kirish | Ro'yxatdan o'tish</NavLink>
           )}
         </div>
       </nav>
@@ -124,7 +124,7 @@ export default Navigation;
 //   return (
 //     <div className="bg-[#f7bf9f]">
 //       <nav className="container mx-auto py-5 flex flex-col md:flex-row justify-between items-center">
-        
+
 //         {/* Logo (left on larger screens) */}
 //         <div className="mb-4 md:mb-0">
 //           <NavLink to="/" className="font-lato font-bold text-xl text-[#424551]">Logo</NavLink>
