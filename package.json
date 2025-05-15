@@ -11,12 +11,20 @@
   },
   "dependencies": {
     "@react-google-maps/api": "^2.20.6",
+<<<<<<< HEAD
     "firebase": "^11.6.0",
+=======
+    "firebase": "^11.7.3",
+>>>>>>> 0bd2b00 (login)
     "lucide": "^0.488.0",
     "lucide-react": "^0.488.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+<<<<<<< HEAD
     "react-router-dom": "^7.5.0",
+=======
+    "react-router-dom": "^7.6.0",
+>>>>>>> 0bd2b00 (login)
     "swiper": "^11.2.6"
   },
   "devDependencies": {
