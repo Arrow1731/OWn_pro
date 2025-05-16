@@ -143,11 +143,6 @@
 
 
 
-
-
-
-
-
 import React, { useState } from 'react';
 import { db } from '../Firebase/firebase';
 import { collection, addDoc } from 'firebase/firestore';
