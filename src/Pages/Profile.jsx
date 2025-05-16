@@ -846,7 +846,7 @@ const Profile = () => {
               onClick={() => window.location.href = '/students'}
               className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
             >
-              Manage Students
+              O'quchilarni boshqarish
             </button>
           </div>
         )}
@@ -858,7 +858,7 @@ const Profile = () => {
               href="/tests"
               className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
             >
-              Take a Test
+              Test topshirish
             </a>
           </div>
         )}

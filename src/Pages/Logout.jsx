@@ -17,7 +17,7 @@ const Logout = () => {
       });
   }, [navigate]);
 
-  return <h2>Logging out...</h2>;
+  return <h2>Tizimdan chiqilyabdi...</h2>;
 };
 
 export default Logout;

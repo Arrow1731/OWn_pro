@@ -86,7 +86,7 @@ const Student = () => {
     navigate('/tests');
   }, [navigate]);
 
-  return <p className="p-4">Redirecting to test list...</p>;
+  return <p className="p-4">Test qismiga qayta kirish...</p>;
 };
 
 export default Student;

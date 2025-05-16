@@ -21,7 +21,7 @@ const Results = () => {
         <div key={i} className="mb-4 border p-4 rounded">
           <p><strong>Student ID:</strong> {result.studentId}</p>
           <p><strong>Test ID:</strong> {result.testId}</p>
-          <p><strong>Score:</strong> {result.score}/{result.total}</p>
+          <p><strong>Natijasi:</strong> {result.score}/{result.total}</p>
         </div>
       ))}
     </div>
