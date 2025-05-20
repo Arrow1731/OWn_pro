@@ -1,92 +1,54 @@
-// // import React, { Component } from 'react'
-
-// // export default class Student extends Component {
-// //   render() {
-// //     return (
-// //       <div className='container'>Student</div>
-// //     )
-// //   }
-// // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // src/Pages/Student.jsx
-// import React, { useEffect } from 'react';
-// import { useNavigate } from 'react-router-dom';
-
-// const Student = () => {
-//   const navigate = useNavigate();
-
-//   useEffect(() => {
-//     const testId = 'YOUR_TEST_ID_HERE'; // Replace with actual test ID from Firebase
-//     navigate(`/student/take/${testId}`);
-//   }, [navigate]);
-
-//   return null; // or show a loading spinner/message
-// };
-
-// export default Student;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { auth, db } from '../Firebase/firebase';
+import { collection, query, where, getDocs } from 'firebase/firestore';
 
 const Student = () => {
-  const navigate = useNavigate();
+  const [student, setStudent] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Redirect to test list when student visits this page
-    navigate('/tests');
-  }, [navigate]);
+    const fetchStudentData = async () => {
+      const currentUser = auth.currentUser;
+      if (!currentUser) {
+        setLoading(false);
+        return;
+      }
 
-  return <p className="p-4">Test qismiga qayta kirish...</p>;
+      try {
+        const q = query(collection(db, 'users'), where('uid', '==', currentUser.uid));
+        const querySnapshot = await getDocs(q);
+
+        if (!querySnapshot.empty) {
+          setStudent(querySnapshot.docs[0].data());
+        } else {
+          console.error('No matching student found in Firestore.');
+        }
+      } catch (error) {
+        console.error('Error fetching student info:', error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchStudentData();
+  }, []);
+
+  if (loading) return <div className="p-6 text-lg">⏳ Loading student profile...</div>;
+  if (!student) return <div className="p-6 text-red-500">❌ Student not found.</div>;
+
+  return (
+    <div className="p-6 max-w-xl mx-auto mt-10 bg-white shadow rounded-lg">
+      <h1 className="text-3xl font-bold mb-6 text-center text-blue-700">🎓 Student Profile</h1>
+      <div className="space-y-3 text-gray-800">
+        <p><strong>👤 Full Name:</strong> {student.fullName}</p>
+        <p><strong>🧑 Nickname:</strong> {student.nickname}</p>
+        <p><strong>🎂 Age:</strong> {student.age}</p>
+        <p><strong>🏫 Grade:</strong> {student.grade}</p>
+        <p><strong>📧 Email:</strong> {student.email}</p>
+        <p><strong>🔐 Role:</strong> {student.role}</p>
+      </div>
+    </div>
+  );
 };
 
 export default Student;
