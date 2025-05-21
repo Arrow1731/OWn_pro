@@ -58,13 +58,7 @@ const TakeTest = () => {
         <div className="space-y-4">
           <h2 className="text-xl">Testni tanlang:</h2>
           {tests.map((test) => (
-            <button
-              key={test.id}
-              onClick={() => handleSelectTest(test.id)}
-              className="block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-            >
-              {test.title}
-            </button>
+            <button key={test.id} onClick={() => handleSelectTest(test.id)} className="block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">{test.title}</button>
           ))}
         </div>
       ) : (
@@ -75,27 +69,14 @@ const TakeTest = () => {
               <p className="font-semibold">{index + 1}. {q.question}</p>
               {q.options.map((opt, i) => (
                 <label key={i} className="block">
-                  <input
-                    type="radio"
-                    name={`q-${index}`}
-                    value={opt}
-                    checked={answers[index] === opt}
-                    onChange={() => handleChange(index, opt)}
-                    className="mr-2"
-                  />
-                  {opt}
+                  <input type="radio" name={`q-${index}`} value={opt} checked={answers[index] === opt} onChange={() => handleChange(index, opt)} className="mr-2"/>{opt}
                 </label>
               ))}
             </div>
           ))}
 
           {!submitted && (
-            <button
-              onClick={handleSubmit}
-              className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700"
-            >
-              Testni yuborish
-            </button>
+            <button onClick={handleSubmit} className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">Testni yuborish</button>
           )}
         </div>
       )}

@@ -75,37 +75,17 @@ const Register = () => {
         <form onSubmit={handleRegister} className="space-y-4">
           <div>
             <label className="block font-medium">To‘liq ism</label>
-            <input
-              name="fullName"
-              type="text"
-              value={form.fullName}
-              onChange={handleChange}
-              required
-              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-            />
+            <input name="fullName" type="text" value={form.fullName} onChange={handleChange} required className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"/>
           </div>
 
           <div>
             <label className="block font-medium">Taxallus</label>
-            <input
-              name="nickname"
-              type="text"
-              value={form.nickname}
-              onChange={handleChange}
-              required
-              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-            />
+            <input name="nickname" type="text" value={form.nickname} onChange={handleChange} required className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"/>
           </div>
 
           <div>
             <label className="block font-medium">Jinsi</label>
-            <select
-              name="sex"
-              value={form.sex}
-              onChange={handleChange}
-              required
-              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-            >
+            <select name="sex" value={form.sex} onChange={handleChange} required className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
               <option value="">Tanlang</option>
               <option value="erkak">Erkak</option>
               <option value="ayol">Ayol</option>
@@ -116,62 +96,29 @@ const Register = () => {
             <>
               <div>
                 <label className="block font-medium">Yosh</label>
-                <input
-                  name="age"
-                  type="number"
-                  value={form.age}
-                  onChange={handleChange}
-                  className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-                  required
-                />
+                <input name="age" type="number" value={form.age} onChange={handleChange} className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400" required/>
               </div>
 
               <div>
                 <label className="block font-medium">Sinf</label>
-                <input
-                  name="grade"
-                  type="text"
-                  value={form.grade}
-                  onChange={handleChange}
-                  className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-                  required
-                />
+                <input name="grade" type="text" value={form.grade} onChange={handleChange} className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400" required/>
               </div>
             </>
           )}
 
           <div>
             <label className="block font-medium">Email</label>
-            <input
-              name="email"
-              type="email"
-              value={form.email}
-              onChange={handleChange}
-              required
-              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-            />
+            <input name="email" type="email" value={form.email} onChange={handleChange} required className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"/>
           </div>
 
           <div>
             <label className="block font-medium">Parol</label>
-            <input
-              name="password"
-              type="password"
-              value={form.password}
-              onChange={handleChange}
-              required
-              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-            />
+            <input name="password" type="password" value={form.password} onChange={handleChange} required className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"/>
           </div>
 
           <div>
             <label className="block font-medium">Rol</label>
-            <select
-              name="role"
-              value={form.role}
-              onChange={handleChange}
-              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-            >
+            <select name="role" value={form.role} onChange={handleChange} className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
               <option value="student">O'quvchi</option>
               <option value="teacher">O'qituvchi</option>
             </select>
@@ -179,12 +126,7 @@ const Register = () => {
 
           {error && <p className="text-red-500 text-sm">{error}</p>}
 
-          <button
-            type="submit"
-            className="w-full py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition duration-300"
-          >
-            Ro'yxatdan o'tish
-          </button>
+          <button type="submit" className="w-full py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition duration-300">Ro'yxatdan o'tish</button>
         </form>
       </div>
     </div>

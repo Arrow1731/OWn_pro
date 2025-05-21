@@ -23,7 +23,7 @@ export default class Contact extends Component {
                   className='w-full h-auto object-contain rounded-lg shadow-md'
                 />
               ) : (
-                <p className='text-red-500'>Img Not Found</p>
+                <p className='text-red-500'>Rasm topilmadi</p>
               )
             }
           </div>
@@ -32,3 +32,5 @@ export default class Contact extends Component {
     )
   }
 }
+
+

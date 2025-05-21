@@ -38,9 +38,7 @@ export default class About extends Component {
 
           <div className='flex flex-col-reverse md:flex-row items-center justify-between gap-6 mt-6'>
             <div className='w-full md:w-1/2'>
-              <p className='text-[18px] sm:text-[21px] font-bold mb-4'>
-                Imtihon jarayoni quyidagicha ishlaydi:
-              </p>
+              <p className='text-[18px] sm:text-[21px] font-bold mb-4'>Imtihon jarayoni quyidagicha ishlaydi:</p>
               <p className='text-[16px] sm:text-[18px] leading-relaxed'>
                 1. Foydalanuvchi sifatida ro‘yxatdan o‘tasiz <br />
                 2. Fan va imtihon turini tanlaysiz <br />

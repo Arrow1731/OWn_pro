@@ -21,7 +21,7 @@ function Navigation() {
         const userDoc = await getDoc(doc(db, "users", currentUser.uid));
         if (userDoc.exists()) {
           const userData = userDoc.data();
-          setRole(userData.role); // get role (e.g., teacher or student)
+          setRole(userData.role);
         }
       } else {
         setRole(null);
@@ -52,9 +52,7 @@ function Navigation() {
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
         <NavLink exact="true" to="/" className="text-xl font-bold text-[#424551]">Logo</NavLink>
 
-        <button className="lg:hidden text-[#424551]" onClick={toggleMenu}>
-          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        <button className="lg:hidden text-[#424551]" onClick={toggleMenu}>{isMenuOpen ? <X size={28} /> : <Menu size={28} />}</button>
 
         <div className={`flex-col lg:flex-row lg:flex gap-6 items-center absolute lg:static bg-[#f7bf9f] w-full lg:w-auto left-0 top-[70px] p-4 lg:p-0 z-10 transition-all duration-300 ease-in-out ${isMenuOpen ? 'flex' : 'hidden'}`}>
           <NavLink className='font-lato font-bold text-[#424551]' to="/" onClick={toggleMenu}>Bosh sahifa</NavLink>
@@ -63,7 +61,7 @@ function Navigation() {
 
           {user && (
             <>
-              <NavLink className='font-lato font-bold text-[#424551]' to="/profile" onClick={toggleMenu}>Profile</NavLink>
+              <NavLink className='font-lato font-bold text-[#424551]' to="/profile" onClick={toggleMenu}>Profil</NavLink>
 
               {role === "teacher" && (
                 <NavLink className='font-lato font-bold text-[#424551]' to="/create-test" onClick={toggleMenu}>Test yaratish</NavLink>
@@ -73,18 +71,12 @@ function Navigation() {
                 onClick={() => {
                   handleLogout();
                   toggleMenu();
-                }}
-                className="font-lato font-bold text-[#424551] border px-3 py-1 rounded hover:bg-red-200"
-              >
-                Log Out
-              </button>
+                }} className="font-lato font-bold text-[#424551] border px-3 py-1 rounded hover:bg-red-200">Chiqish</button>
             </>
           )}
 
           {!user && (
-            <NavLink className='font-lato font-bold text-[#424551]' to="/login" onClick={toggleMenu}>
-              Kirish | Ro'yxatdan o'tish
-            </NavLink>
+            <NavLink className='font-lato font-bold text-[#424551]' to="/login" onClick={toggleMenu}>Kirish | Ro'yxatdan o'tish</NavLink>
           )}
         </div>
       </nav>

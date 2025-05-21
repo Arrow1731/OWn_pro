@@ -40,12 +40,12 @@ const Student = () => {
     <div className="p-6 max-w-xl mx-auto mt-10 bg-white shadow rounded-lg">
       <h1 className="text-3xl font-bold mb-6 text-center text-blue-700">🎓 Student Profile</h1>
       <div className="space-y-3 text-gray-800">
-        <p><strong>👤 Full Name:</strong> {student.fullName}</p>
-        <p><strong>🧑 Nickname:</strong> {student.nickname}</p>
-        <p><strong>🎂 Age:</strong> {student.age}</p>
-        <p><strong>🏫 Grade:</strong> {student.grade}</p>
+        <p><strong>👤 TO'liq ism:</strong> {student.fullName}</p>
+        <p><strong>🧑 Taxallusi:</strong> {student.nickname}</p>
+        <p><strong>🎂 Yoshi:</strong> {student.age}</p>
+        <p><strong>🏫 Sinf:</strong> {student.grade}</p>
         <p><strong>📧 Email:</strong> {student.email}</p>
-        <p><strong>🔐 Role:</strong> {student.role}</p>
+        <p><strong>🔐 Roli:</strong> {student.role}</p>
       </div>
     </div>
   );
