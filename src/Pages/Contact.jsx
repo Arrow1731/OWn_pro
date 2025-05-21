@@ -9,8 +9,8 @@ export default class Contact extends Component {
           <div className='w-full md:w-1/2'>
             <h3 className='text-[24px] font-bold mb-2'>Bizning Manzil:</h3>
             <p className='text-[18px]'>
-              <a href="#" className='text-blue-600 hover:underline'>
-                Toshkent shahar, Mirzo Ulugʻbek tumani, Muminov koʻchasi, 4A
+              <a href="#" className='text-blue-600'>
+              Xorazm viloyati, Bagat tumani, Feruz ko'chasi, 14
               </a>
             </p>
           </div>
@@ -32,5 +32,3 @@ export default class Contact extends Component {
     )
   }
 }
-
-
