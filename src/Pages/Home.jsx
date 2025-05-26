@@ -43,16 +43,16 @@ export default class Home extends Component {
           <section className='my-10'>
             <div className='flex flex-col md:flex-row justify-between items-center bg-[#9FB5C9] rounded-[56px] py-6 px-[20px] md:px-[53px] gap-4 md:gap-0'>
               <div>
-                <h3 className='text-[50px] md:text-[80px] font-bold text-[#fff]'>We have</h3>
+                <h3 className='text-[50px] md:text-[80px] font-bold text-[#fff]'>Bizning Jamoa</h3>
               </div>
               <div className='flex text-[#fff] gap-[25px] text-[24px] md:text-[34px]'>
                 <div>
-                  <h4>5+</h4>
-                  <p>Experience</p>
+                  <h4>5 Yil+</h4>
+                  <p>Ish Tajribasi</p>
                 </div>
                 <div>
-                  <h4>5+</h4>
-                  <p>Experience</p>
+                  <h4>2000+</h4>
+                  <p>O'quvchilar</p>
                 </div>
               </div>
             </div>
