@@ -26,10 +26,10 @@ function Footer() {
       return;
     }
 
-    const token = '7478334982:AAH2jc-BfsE7qxZ7qwFVWTWtbXlM7UPM64Q';
-    const chat_id = '6536432455';
-    const text = `📩 Yangi murojaat!\n👤 Ism: ${name}\n📞 Telefon: ${phone}\n💬 Xabar: ${message}`;
-    const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(text)}`;
+    // const token = '7478334982:AAH2jc-BfsE7qxZ7qwFVWTWtbXlM7UPM64Q';
+    // const chat_id = '6536432455';
+    // const text = `📩 Yangi murojaat!\n👤 Ism: ${name}\n📞 Telefon: ${phone}\n💬 Xabar: ${message}`;
+    // const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(text)}`;
 
     try {
       await fetch(url);
